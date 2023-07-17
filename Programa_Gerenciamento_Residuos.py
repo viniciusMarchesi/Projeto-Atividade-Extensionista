@@ -16,6 +16,12 @@ class GerenciamentoResiduos:
     def obter_empresas(self):
         return self.empresas
 
+    def imprimir_empresas(self):
+        for empresa, tipos_residuos in self.empresas.items():
+            print(f'Empresa: {empresa}\n')
+            for tipo_residuo, quantidade in tipos_residuos.items():
+                print(f'  {tipo_residuo}: {quantidade}\n')
+
     def atualizar_empresa(self):
         nome = input('Digite o nome da empresa: ')
         if nome in self.empresas:
@@ -50,6 +56,13 @@ class GerenciamentoResiduos:
         else:
             return None
 
+    def imprimir_residuos(self):
+        empresa = input('Digite o nome da empresa: ')
+        if empresa in self.empresas:
+            print(f'Empresa: {empresa}\n')
+            for tipo_residuo, quantidade in self.empresas[empresa].items():
+                print(f'  {tipo_residuo}: {quantidade}\n')
+
     def atualizar_residuo(self):
         empresa = input('Digite o nome da empresa: ')
         if empresa in self.empresas:
@@ -65,49 +78,65 @@ class GerenciamentoResiduos:
             if tipo_residuo in self.empresas[empresa]:
                 del self.empresas[empresa][tipo_residuo]
 
-    def obter_relatorio_residuos(self):
+    def obter_relatorio_ressiudos(self):
         relatorio = {}
-        for empresa, tipos_residuos in self.empresas.items():
-            for tipo_residuo, quantidade in tipos_residuos.items():
-                if tipo_residuo not in relatorio:
-                    relatorio[tipo_residuo] = 0
-                relatorio[tipo_residuo] += quantidade
+        for empresa, tipos_ressiudos in self.empresas.items():
+            for tipo_ressiudo, quantidade in tipos_ressiudos.items():
+                if tipo_ressiudo not in relatorio:
+                    relatorio[tipo_ressiudo] = 0
+                relatorio[tipo_ressiudo] += quantidade
         return relatorio
 
-gerenciamento_residuos = GerenciamentoResiduos()
+    def imprimir_relatorio(self):
+        relatorio = self.obter_relatorio_ressiudos()
+        for tipo_ressiudo, quantidade in relatorio.items():
+            print(f'{tipo_ressiudo}: {quantidade}\n')
+
+gerenciamento_ressiudos = GerenciamentoResiduos()
 
 # Adicionar empresas
-gerenciamento_residuos.adicionar_empresa()
+gerenciamento_ressiudos.adicionar_empresa()
 
 # Obter empresas
-empresas = gerenciamento_residuos.obter_empresas()
+empresas = gerenciamento_ressiudos.obter_empresas()
 print(empresas)
 
+# Imprimir empresas
+gerenciamento_ressiudos.imprimir_empresas()
+
 # Atualizar empresa
-gerenciamento_residuos.atualizar_empresa()
+gerenciamento_ressiudos.atualizar_empresa()
 
 # Remover empresa
-gerenciamento_residuos.remover_empresa()
+gerenciamento_ressiudos.remover_empresa()
 
 # Adicionar resíduo
-gerenciamento_residuos.adicionar_ressiudo()
+gerenciamento_ressiudos.adicionar_ressiudo()
 
 # Obter resíduos
-resiudos = gerenciamento_residuos.obter_ressiudos()
+resiudos = gerenciamento_ressiudos.obter_ressiudos()
 print(resiudos)
 
+# Imprimir resíduos
+gerenciamento_ressiudos.imprimir_resiudos()
+
 # Atualizar resíduo
-gerenciamento_residuos.atualizar_ressiudo()
+gerenciamento_ressiudos.atualizar_ressiudo()
 
 # Remover resíduo
-gerenciamento_residuos.remover_ressiudo()
+gerenciamento_ressiudos.remover_ressiudo()
 
 # Obter empresas e resíduos atualizados
-empresas = gerenciamento_residuos.obter_empresas()
+empresas = gerenciamento_ressiudos.obter_empresas()
 print(empresas)
 
 # Obter relatório de resíduos
-relatorio = gerenciamento_residuos.obter_relatorio_residuos()
+relatorio = gerenciamento_ressiudos.obter_relatorio_ressiudos()
 print(relatorio)
+
+# Imprimir relatório
+gerenciamento_ressiudos.imprimir_relatorio()
+
+
 
 
