@@ -16,6 +16,29 @@ class GerenciamentoResiduos:
         if nome in self.empresas:
             del self.empresas[nome]
 
+    def adicionar_residuo(self, empresa, tipo_residuo, quantidade):
+        if empresa in self.empresas:
+            if tipo_residuo in self.empresas[empresa]:
+                self.empresas[empresa][tipo_residuo] += quantidade
+            else:
+                self.empresas[empresa][tipo_residuo] = quantidade
+
+    def obter_residuos(self, empresa):
+        if empresa in self.empresas:
+            return self.empresas[empresa]
+        else:
+            return None
+
+    def atualizar_residuo(self, empresa, tipo_residuo, quantidade):
+        if empresa in self.empresas:
+            if tipo_residuo in self.empresas[empresa]:
+                self.empresas[empresa][tipo_residuo] = quantidade
+
+    def remover_residuo(self, empresa, tipo_residuo):
+        if empresa in self.empresas:
+            if tipo_residuo in self.empresas[empresa]:
+                del self.empresas[empresa][tipo_residuo]
+
     def obter_relatorio_residuos(self):
         relatorio = {}
         for empresa, tipos_residuos in self.empresas.items():
@@ -41,11 +64,25 @@ gerenciamento_residuos.atualizar_empresa('Empresa A', {'plástico': 10, 'papel':
 # Remover empresa
 gerenciamento_residuos.remover_empresa('Empresa B')
 
-# Obter empresas atualizadas
+# Adicionar resíduo
+gerenciamento_residuos.adicionar_residuo('Empresa A', 'plástico', 3)
+
+# Obter resíduos
+residuos = gerenciamento_residuos.obter_residuos('Empresa A')
+print(residuos)
+
+# Atualizar resíduo
+gerenciamento_residuos.atualizar_residuo('Empresa A', 'plástico', 7)
+
+# Remover resíduo
+gerenciamento_residuos.remover_residuo('Empresa A', 'papel')
+
+# Obter empresas e resíduos atualizados
 empresas = gerenciamento_residuos.obter_empresas()
 print(empresas)
 
 # Obter relatório de resíduos
 relatorio = gerenciamento_residuos.obter_relatorio_residuos()
 print(relatorio)
+
 
