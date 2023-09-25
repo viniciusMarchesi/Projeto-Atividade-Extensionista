@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f1f0;
+    border-top: 100px solid #008026;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
+    border-top: 5px solid #008026;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    position: relative;
+    top: 0px;
+    color: #008026;
+}
+
+
+
+#mapa {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    background :#008026;
+}
