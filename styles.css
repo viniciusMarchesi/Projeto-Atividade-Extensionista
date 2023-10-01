@@ -5,10 +5,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-
-
-
 header {
     background-color: #008026;
     color: white;
@@ -16,32 +12,31 @@ header {
     padding: 5px;
     border-bottom: 5px solid #008026; /* Cor de borda mais escura para contraste */
 }
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0px;
 }
-
 h1 {
     position: relative;
     top: 0px;
     color: white;
+    text-align: center;
+    display: block;
+    margin-left: 450px;
+    margin-right: auto;
 }
-
 h2{
     text-align: center;
     margin-top: 50px;
 }
-
 #mapa {
     height: 500px;
     width: 100%;
     margin-top: 20px;
     text-align: center;
 }
-
 button {
     font: sans-serif;
     text-align: center;
@@ -58,9 +53,6 @@ button {
     font-size: 20px;
     border: none;
     }
-    
-
-
 select {
     display: block;
     width: 200px;
@@ -69,7 +61,6 @@ select {
     font-size: 20px;
     margin-right: 5px; /* Adiciona uma margem à direita do select */
 }
-
 #cacamba {
     display: block;
     width: 500px;
@@ -80,15 +71,32 @@ select {
     text-align: center;
     border-radius: 5px;
 }
-
 #titulo {
     text-align: center;
     color: #008026;
     font-size: 24px;
 }
-
 #texto {
     margin: 20px auto;
     width: 80%;
     line-height: 1.6;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 200px; /* Ajuste conforme necessário */
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
