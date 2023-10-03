@@ -9,40 +9,70 @@
         <img id="logo" src="Power.png" alt="Logotipo">
         <h1>Recicle-Já</h1>
     </header>
-    <h2>Selecione o tipo de resíduo:</h2>
-    <div class="container">
-        <select id="residuo">
-            <option value="plastico">Plástico</option>
-            <option value="vidro">Vidro</option>
-            <option value="Papelão">Papelão</option>
-            <option value="Matéria orgânica">Matéria orgânica</option>
-            <option value="Metais">Metais</option>
-            <option value="Madeiras">Madeiras</option>
-            <option value="Eletrônicos">Eletrônicos</option>
-            <option value="Eletrodomésticos">Eletrodomésticos</option>
-            <option value="Roupas">Roupas</option>
-            <option value="Entulho">Entulho</option>
-      <!-- Adicione mais opções conforme necessário -->
-        </select>
+<div class="page-container">
+    <div class="content-wrap">
+        <h2>Olá! Selecione o tipo de resíduo:</h2>
+            <div class="container">
+                <select id="residuo">
+                    <option value="plastico">Plástico</option>
+                    <option value="vidro">Vidro</option>
+                    <option value="Papelão">Papelão</option>
+                    <option value="Matéria orgânica">Matéria orgânica</option>
+                    <option value="Metais">Metais</option>
+                    <option value="Madeiras">Madeiras</option>
+                    <option value="Eletrônicos">Eletrônicos</option>
+                    <option value="Eletrodomésticos">Eletrodomésticos</option>
+                    <option value="Roupas">Roupas</option>
+                    <option value="Entulho">Entulho</option>
+            <!-- Adicione mais opções conforme necessário -->
+                </select>
+            
+                <button onclick="buscarLocais()">Buscar locais de descarte</button>
+                
+            </div>
+        <!--<iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.289107704891!2d-46.63881848487376!3d-23.55051988469059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58a85e4f5555%3A0x5408c9502c93b8ce!2sS%C3%A3o%20Paulo%20-%20State%20of%20S%C3%A3o%20Paulo%2C%20Brazil!5e0!3m2!1sen!2sus!4v1632962271116!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+        <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.859861818305!2d-47.12787652467001!3d-22.881634636972635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c7f815bd8429%3A0xfe63d12e39ecf6ec!2sEcoponto%20Parque%20Via%20Norte!5e0!3m2!1sen!2sus!4v1696102360613!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Adicione mais elementos conforme necessário -->
+        <p id="cacamba"></p> <!-- Elemento adicionado para exibir a mensagem da caçamba -->
+        <script src="scripts.js"></script>
     
-        <button onclick="buscarLocais()">Buscar locais de descarte</button>
-        
-    </div>
-    <!--<iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.289107704891!2d-46.63881848487376!3d-23.55051988469059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58a85e4f5555%3A0x5408c9502c93b8ce!2sS%C3%A3o%20Paulo%20-%20State%20of%20S%C3%A3o%20Paulo%2C%20Brazil!5e0!3m2!1sen!2sus!4v1632962271116!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
-    <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.859861818305!2d-47.12787652467001!3d-22.881634636972635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c7f815bd8429%3A0xfe63d12e39ecf6ec!2sEcoponto%20Parque%20Via%20Norte!5e0!3m2!1sen!2sus!4v1696102360613!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <!-- Adicione mais elementos conforme necessário -->
-    <p id="cacamba"></p> <!-- Elemento adicionado para exibir a mensagem da caçamba -->
-    <script src="scripts.js"></script>
-    
-    <h2 id="titulo">A Importância da Reciclagem para o Planeta</h2>
-    <p id="texto">
+        <h2 id="titulo">A Importância da Reciclagem para o Planeta</h2>
+        <img src="alternativa_de_reciclagem_01.png" alt="Descrição da imagem">
+
+        <p id="texto">
         A reciclagem é vital para a saúde do nosso planeta. 
         Ela reduz a quantidade de resíduos que acabam em aterros sanitários, economiza recursos naturais, economiza energia e reduz a poluição do ar e da água. Ao reciclar, 
         estamos ajudando a preservar o nosso planeta para as gerações futuras.
-    </p>
+        </p>
 
-    <div class="footer">
-        <p>Recicle-Já © 2023</p>
-      </div>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Aliquid non molestiae quas quod quia tempore culpa sint corporis nostrum! 
+        Perspiciatis harum et, odit quos enim labore blanditiis amet dignissimos pariatur?   
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Modi et porro maiores id ad nostrum, non delectus laborum enim nihil, 
+            eaque suscipit quibusdam deleniti fuga reprehenderit, rerum minima dolorem 
+            dolorum?
+        </p>
+    
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis 
+            pariatur perspiciatis quibusdam, delectus dolores voluptatibus totam illum. 
+            Tempore suscipit nemo minima, assumenda, aliquam veritatis at vitae accusantium 
+            tempora, facilis nam.
+        </p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Laborum asperiores debitis maiores animi fuga molestias cum, 
+            ipsa doloribus illo expedita facere architecto corrupti sit possimus, 
+            suscipit eveniet sunt facilis corporis.
+        </p>    
+        
+            <footer class="footer">
+            <p>Rodapé © 2023</p>
+        </footer>
+    </div>
+</div> 
 </body>
 </html>

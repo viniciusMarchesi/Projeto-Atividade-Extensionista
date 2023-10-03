@@ -24,12 +24,12 @@ h1 {
     color: white;
     text-align: center;
     display: block;
-    margin-left: 450px;
+    margin-left: 375px;
     margin-right: auto;
 }
 h2{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 #mapa {
     height: 500px;
@@ -90,13 +90,26 @@ header {
 #logo {
     height: 200px; /* Ajuste conforme necessário */
 }
+page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.content-wrap {
+    flex: 1;
+}
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+img {
+    float: left;
+    margin-right: 50px;
+    height: 400px;
+    margin-top: 50px;
+}
+p {
+    margin-bottom: 50px;
 }
