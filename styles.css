@@ -112,9 +112,27 @@ img {
 }
 p {
     margin-bottom: 50px;
+    font-size: 16px;
 }
 
 h2 {
     text-align: center;
     margin-top: 100px;
 }
+.center {
+    display: block;
+    margin-left: 370px;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.meuTextoCentralizado {
+    text-align: left;
+    margin-left: 300px;
+    margin-right: 300px;
+    font-size: 20px;
+  }
+.h2-verde {
+    color: #008026; }
+
+ 
